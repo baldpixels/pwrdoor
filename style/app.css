@@ -1,0 +1,277 @@
+@import url("header.css");
+@import url("nav.css");
+@import url("grid.css");
+@import url("portfolio.css");
+@import url("about.css");
+
+/* COLORS
+* blue: #0700ff
+* orange: #ec502e
+* light-grey: #f9f9f9
+* dark-grey: #7a7a7a
+*/
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+section, article, div {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, video {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+  color: inherit;
+}
+
+p {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.page {
+  position: relative;
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+.black-bg {
+  background-color: #000;
+}
+
+.blue-bg {
+  background-color: #0700ff;
+}
+
+.height-single {
+  height: 100vh;
+}
+
+.height-double {
+  height: 200vh;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+#intro-page {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+#intro-page h1 {
+  font-weight: bold;
+}
+
+.intro-word {
+  opacity: 0;
+}
+
+.blue {
+  color: #0700ff;
+}
+
+/*
+* CREDIT:
+* Tobias Ahlin
+* https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+*/
+
+.blue-underline {
+  position: relative;
+  padding-bottom: 3px;
+  width: 0;
+}
+
+.blue-underline:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #0700ff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.blue-underline:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#tagline-page {
+  background-color: #fff;
+}
+
+#tagline-page h2 {
+  font-weight: lighter;
+  color: #7a7a7a;
+}
+
+.button-internal {
+  position: relative;
+  display: inline;
+  box-sizing: border-box;
+  background: none;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  color: #0700ff;
+  border: 1px solid #0700ff;
+  border-radius: 3px;
+}
+
+.button-text {
+  z-index: 0;
+  position: relative;
+  display: inline;
+}
+
+.button-fill {
+  z-index: 0;
+  position: absolute;
+  display: inline;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #0700ff;
+}
+
+.full-width {
+  width: 100vw;
+  height: auto;
+}
+
+.full-width img {
+  width: 100%;
+}
+
+.sticker {
+  position: absolute;
+  z-index: +1;
+  width: 100vw;
+  height: 0;
+}
+
+#diamond-loop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  opacity: 0;
+}
+/*
+*
+*
+* SMALL DEVICES
+*
+*
+*/
+@media (max-width: 768px) {
+  .page {
+    padding: 120px 15px 120px 15px;
+  }
+
+  #intro-page {
+    padding-top: 33vh;
+    padding-left: 60px;
+  }
+
+  #intro-page h1 {
+    font-size: 3em;
+  }
+
+  #tagline-page {
+
+  }
+
+  #tagline-page h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .button-internal {
+    font-size: .75em;
+    padding: 15px;
+  }
+
+  #diamond-loop {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/*
+*
+*
+* LARGE DEVICES
+*
+*
+*/
+@media (min-width: 769px) {
+  .page {
+    padding: 150px 54px 150px 54px;
+  }
+
+  #intro-page {
+    padding: 150px;
+  }
+
+  #intro-page h1 {
+    font-size: 9em;
+  }
+
+  #tagline-page {
+    padding: 105px;
+  }
+
+  #tagline-page h2 {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+
+  .button-internal {
+    font-size: 1.5em;
+    padding: 18px;
+  }
+
+  #diamond-loop {
+    width: 300px;
+    height: 300px;
+  }
+}

@@ -1,0 +1,134 @@
+#resume-page {
+  background-color: #000;
+}
+
+#contact-page {
+  background-color: #fff;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.icon {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#bio {
+  color: #0700ff;
+  font-weight: lighter;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+}
+
+#bio p {
+
+}
+
+.white-header {
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/*
+*
+*
+* SMALL DEVICES
+*
+*
+*/
+@media (max-width: 768px) {
+  .social-icons {
+    margin: 15px;
+  }
+
+  .icon-mid {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+
+  .icon-left {
+    padding-right: 30%;
+    padding-left: 0;
+  }
+
+  .icon-right {
+    padding-left: 30%;
+    padding-right: 0;
+  }
+
+  #bio {
+    margin: 30px;
+    padding: 0;
+    font-size: .9em;
+  }
+
+  #bio p {
+    padding: 30px;
+    border-top: 1px solid #0700ff;
+    text-align: center;
+  }
+
+  #bio-last {
+    border-bottom: 1px solid #0700ff;
+  }
+
+  .white-header {
+    text-align: center;
+    margin: 15px;
+    font-size: 3em;
+  }
+}
+
+/*
+*
+*
+* LARGE DEVICES
+*
+*
+*/
+@media (min-width: 769px) {
+  .social-icons {
+    margin: 30px;
+  }
+
+  .icon-mid {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+
+  .icon-left {
+    padding-right: 30%;
+    padding-left: 0;
+  }
+
+  .icon-right {
+    padding-left: 30%;
+    padding-right: 0;
+  }
+
+  #connor-pic {
+
+  }
+
+  #bio {
+    margin: 30px;
+    padding: 0 0 0 30px;
+    font-size: 1em;
+  }
+
+  #bio p {
+    padding: 30px;
+    border-left: 1px solid #0700ff;
+    margin-bottom: 30px;
+  }
+
+  .white-header {
+    text-align: left;
+    font-size: 4em;
+    margin: 30px;
+  }
+}
