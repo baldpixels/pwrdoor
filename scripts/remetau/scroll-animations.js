@@ -2,6 +2,7 @@ $( document ).ready( function() {
 
   var ocean = $("#ocean");
   var title = $("h1");
+  var arrow = $("#arrow");
   var titleOn = false;
   var fadeInTime = 600;
 
@@ -44,14 +45,27 @@ $( document ).ready( function() {
       }, { duration: fadeInTime * 1.5, queue: false });
     });
 
+    arrow.fadeIn(fadeInTime);
+
     titleOn = true;
   }
 
 // EVENT LISTENERS
   $('body').scroll(function() {
-    title.removeClass('fade-in');
-    title.addClass('fade-out');
+    setTimeout(function() {
+      title.removeClass('fade-in');
+      title.addClass('fade-out');
+    }, 450);
+
+    arrow.removeClass('fade-in');
+    arrow.addClass('fade-out');
   });
 
   title.addClass('fade-in');
-})
+  title.removeClass('invisible');
+
+  setTimeout(function() {
+    arrow.addClass('fade-in');
+    arrow.removeClass('invisible');
+  }, 600);
+});

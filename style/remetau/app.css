@@ -54,6 +54,12 @@ body {
   text-align: center;
 }
 
+#arrow {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 h1 {
   z-index: -1;
   position: fixed;
@@ -112,7 +118,6 @@ section {
 }
 
 .media-wrapper {
-  flex: 0 50%;
   width: 100%;
   height: auto;
   text-align: center;
@@ -121,6 +126,8 @@ section {
 .media {
   z-index: +1;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
 }
 
 .media:hover {
@@ -247,10 +254,12 @@ a:hover {
   }
 
   .media {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    order: 0;
+
+  }
+
+  #arrow {
+    bottom: 3%;
+    height: 60px;
   }
 
   /* SMALL */
@@ -339,8 +348,12 @@ a:hover {
   }
 
   .media {
-    width: 100%;
-    height: auto;
+
+  }
+
+  #arrow {
+    bottom: 3%;
+    height: 90px;
   }
 
   /* LARGE */
